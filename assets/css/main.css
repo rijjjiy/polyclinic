@@ -1,0 +1,336 @@
+.hero-section {
+    padding: 100px 0;
+    background: linear-gradient(rgba(0,82,165,0.9), rgba(0,82,165,0.9)), url('/img/hero-bg.jpg');
+    background-size: cover;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.services .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer {
+    background: #2c3e50;
+}
+
+
+:root {
+    --primary-color: #2A5C82;
+    --secondary-color: #5BA4E6;
+}
+
+.hero {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: 100px 0;
+}
+
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(42, 92, 130, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+.btn-time {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-time:hover:not(:disabled) {
+    background-color: var(--primary-color);
+    color: white;
+    transform: scale(1.05);
+}
+
+.flatpickr-day.selected {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* Стили платежных карточек */
+.payment-card {
+    border: 2px solid #dee2e6;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.payment-card.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(42, 92, 130, 0.2);
+}
+
+/* Анимация загрузки */
+.payment-loader {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Чек успешной оплаты */
+.receipt-details .list-group-item {
+    border-color: rgba(0,0,0,.05);
+}
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  border: 1px dashed #ddd;
+  margin-top: 20px;
+}
+/* Стили формы */
+.personal-data {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-save {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background: #45a049;
+}
+/* Основные стили страницы выбора врача */
+.booking-container {
+    padding: 30px 0;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.doctor-selection-header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Стили карточек врачей */
+.doctor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 15px;
+}
+
+.doctor-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.doctor-specialty {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* Кнопка выбора */
+.btn-book {
+    display: inline-block;
+    background: #3498db;
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+.btn-book:hover {
+    background: #2980b9;
+    border-color: #3498db;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .doctor-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .doctor-card {
+        margin: 0 10px;
+    }
+}
+/* Стили для временных слотов */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.slot-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.slot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slot-date {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.slot-time {
+    color: #3498db;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.btn-book-slot {
+    background: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.5}
+	
+	/* Стили для таблицы записей врача */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.badge.bg-info {
+    background-color: #17a2b8 !important;
+    padding: 0.5em 0.8em;
+    font-size: 0.9em;
+}
+
+.card-header {
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.table th {
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.btn-sm i {
+    margin-right: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .table-responsive {
+        border: 0;
+    }
+    
+    .table thead {
+        display: none;
+    }
+    
+    .table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+    }
+    
+    .table td {
+        display: block;
+        text-align: right;
+        border-bottom: 1px dotted #dee2e6;
+    }
+    
+    .table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+}
